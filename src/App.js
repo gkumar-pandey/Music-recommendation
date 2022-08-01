@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import musicData from "./Components/Data";
+import Footer from "./Components/Footer";
 
 function App() {
   const [selectedMusicList, setSelectedMusicList] = useState([]);
@@ -21,6 +22,7 @@ function App() {
       </nav>
       <div className="container">
         <div className="geners">
+          <p>🎵</p>
           {geners.map((item) => {
             return (
               <button
@@ -37,21 +39,24 @@ function App() {
         <div className="music-list">
           {selectedMusicList.map((item, idx) => {
             console.log(item);
-            return <div className="list-item" key={idx}>
-              <img src={item.img} style={style.img} />
-              <p>{item.name}</p>
-            </div>;
+            return (
+              <div className="list-item" key={idx}>
+                <img src={item.img} style={style.img} />
+                <p>{item.name}</p>
+              </div>
+            );
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
 const style = {
-  img:{
-    height:'100px',
-    width:'100px',
-    padding: '0.5rem'
-  }
-}
+  img: {
+    height: "100px",
+    width: "100px",
+    padding: "0.5rem",
+  },
+};
 export default App;
