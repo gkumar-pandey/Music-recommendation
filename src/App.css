@@ -1,38 +1,59 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar{
+  border: 1px solid red;
   text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  width: 50%;
+  margin: 1rem auto;
+  border: 1px solid red;
+  padding: 1rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.geners-btn{
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  margin: 0 1rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.music-list {
+  border: 1px solid red;
+  padding: 1rem;
+}
+.list-item {
+  border: 1px solid red;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1rem 0;
+  border-radius: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.list-item p{
+  font-size: 1.6rem;
+  /* border: 1px solid red; */
+  height: 100px;
+  padding: 1rem 0.8rem;
+  font-weight: bold;
 }
+ 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 600px) {
+   .nav-bar{
+    font-size: 1.2rem;
+   }
+   .container{
+    width: 100%;
+   }
+   .geners{
+    /* border: 1px solid red; */
+    display: flex;
+   }
+   .geners-btn{
+    padding: 0.4rem 0.8rem;
+    font-size: 1.3rem;
+   }
 }
