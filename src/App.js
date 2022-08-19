@@ -21,33 +21,38 @@ function App() {
         <h1>🎧 Music Recommendation 🎧</h1>
       </nav>
       <div className="container">
-        <div className="geners">
-          <p>🎵</p>
-          {geners.map((item) => {
-            return (
-              <button
-                className="geners-btn"
-                value={item}
-                onClick={() => onClickSelectGeners(item)}
-                key={item}
-              >
-                {item}
-              </button>
-            );
-          })}
-        </div>
-        <div className="music-list">
-          {selectedMusicList.map((item, idx) => {
-            console.log(item);
-            return (
-              <div className="list-item" key={idx}>
-                <img src={item.img} style={style.img} />
-                <p>{item.name}</p>
-              </div>
-            );
-          })}
+        <div className="container-wrapper">
+          <div className="geners">
+            <p>🎵</p>
+            {geners.map((item) => {
+              return (
+                <button
+                  className="geners-btn"
+                  value={item}
+                  onClick={() => onClickSelectGeners(item)}
+                  key={item}
+                >
+                  {item}
+                </button>
+              );
+            })}
+          </div>
+          <div className="music-list">
+            {selectedMusicList.map((item, idx) => {
+              {
+                /* console.log(item); */
+              }
+              return (
+                <div className="list-item" key={idx}>
+                  <img src={item.img} style={style.img} />
+                  <p>{item.name}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
